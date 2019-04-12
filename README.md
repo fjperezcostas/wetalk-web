@@ -1,6 +1,6 @@
 # wetalk-web
 
-Web client for **wetalk app**. This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.0.
+Web chat client that consumes [wetalk API](https://github.com/fjperezcostas/wetalk-api) topics. This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.0.
 
 ## Development server
 

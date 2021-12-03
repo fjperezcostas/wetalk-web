@@ -1,0 +1,22 @@
+<small>Channels</small>
+<nav *ngIf="chats">
+    <li class="p-1 pl-2" *ngFor="let chat of chats | filterChatByType: ChatType.CHANNEL" [ngClass]="{ 'btn-secondary': chat === selected }" (click)="switchChat(chat)">
+        <div class="oi oi-chat w-10"></div>
+        <div class="font-weight-bold d-inline-block w-80">{{chat.name | truncate:20 }}</div>
+        <div class="w-10 d-inline-block">
+            <div class="badge badge-danger" *ngIf="chat.pendingToRead > 0">{{chat.pendingToRead}}</div>
+        </div>
+    </li>
+</nav>
+<hr>
+<small>Users</small>
+<nav *ngIf="chats">
+    <li class="p-1 pl-2" *ngFor="let chat of chats | filterChatByType: ChatType.PRIVATE" [ngClass]="{ 'btn-secondary': chat === selected }" (click)="switchChat(chat)">
+        <div class="oi oi-media-record d-inline-block text-success w-10" *ngIf="chat.online === true"></div>
+        <div class="oi oi-x d-inline-block w-10" *ngIf="chat.online === false"></div>
+        <div class="font-weight-bold d-inline-block w-80">{{chat.name | truncate:20 }}</div>
+        <div class="w-10 d-inline-block">
+            <div class="badge badge-danger" *ngIf="chat.pendingToRead > 0">{{chat.pendingToRead}}</div>
+        </div>
+    </li>
+</nav>

@@ -1,0 +1,20 @@
+<div class="container-fluid h-100">
+    <div class="row h-100">
+        <aside class="col-lg-3 p-3 pl-4">
+            <section class="h-10 mb-3">
+                <wt-main-menu [username]="username" (onLogout)="logout()"></wt-main-menu>
+            </section>
+            <section class="h-90 scrollable">
+                <wt-available-chats *ngIf="chats" [chats]="chats" (onSwitchChat)="switchChat($event)"></wt-available-chats>
+            </section>
+        </aside>
+        <div class="col-lg-9">
+            <section class="h-85 pt-3 pb-3">
+                <wt-received-messages [chat]="currentChat"></wt-received-messages>
+            </section>
+            <section class="h-15">
+                <wt-new-message (onSendMessage)="sendMessage($event)"></wt-new-message>
+            </section>
+        </div>
+    </div>
+</div>

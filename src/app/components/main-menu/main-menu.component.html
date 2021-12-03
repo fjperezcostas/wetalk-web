@@ -1,0 +1,10 @@
+<div ngbDropdown class="d-inline-block">
+    <button class="btn btn-success" id="menu-options" ngbDropdownToggle>
+      <span class="oi oi-person"></span> {{username | truncate:14 }}
+    </button>
+    <div ngbDropdownMenu aria-labelledby="menu-options">
+      <button class="dropdown-item" (click)="logout()">
+        <div class="oi oi-account-logout"></div> Logout
+      </button>
+    </div>
+</div>

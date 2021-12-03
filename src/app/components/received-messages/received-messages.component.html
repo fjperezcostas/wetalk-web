@@ -1,0 +1,5 @@
+<div class="card bg-light scrollable" #receivedMessages *ngIf="chat">
+  <p class="w-100" *ngFor="let message of chat.messages">
+    <strong>[{{message.date | date: 'HH:mm:ss'}}] {{message.from}}:</strong> {{message.content}}
+  </p>
+</div>

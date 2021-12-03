@@ -1,0 +1,17 @@
+nav {
+    list-style-type: none;
+}
+
+li {
+    border-radius: 0.25em;
+}
+
+li:hover {
+    cursor: pointer;
+}
+
+.oi {
+    width: 18px;
+    font-size: 11px;
+    vertical-align: text-top;
+}

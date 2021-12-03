@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+      <div class="card col-lg-4 offset-lg-4 mt-5 text-center">
+        <div class="card-body mb-4">
+          <h1 class="card-title">wetalk!</h1>
+          <ngb-alert *ngIf="errorMessage" [type]="'danger'" [dismissible]="false">{{errorMessage}}</ngb-alert>
+          <wt-spinner *ngIf="loading"></wt-spinner>
+          <form (ngSubmit)="login()">
+            <input type="text" name="username" class="form-control mt-2" placeholder="username" [(ngModel)]="credentials.username"/>
+            <input type="password" name="password" class="form-control mt-2" placeholder="password" [(ngModel)]="credentials.password"/>
+            <input type="submit" name="submit" value="sign-in" class="form-control btn-success mt-2"/>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>

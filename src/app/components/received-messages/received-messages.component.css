@@ -1,0 +1,19 @@
+
+@media (max-width: 991px) {
+    div {
+        height: 40vh;
+    }
+}
+
+@media (min-width: 992px) {
+    div {
+        height: 80vh;
+    }
+}
+
+p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+    padding: 0;
+    margin: 0;
+}
